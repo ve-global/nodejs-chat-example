@@ -1,0 +1,13 @@
+{
+  "name": "chat",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a socket.io application",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.13.1",
+    "moment": "^2.10.6",
+    "socket.io": "^1.3.6"
+  },
+  "author": "ve interactive"
+}
