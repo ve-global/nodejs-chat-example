@@ -6,16 +6,17 @@ var app = require('express')(),
 
 // Declare messages collection, and launch port.
 var messages = [],
-    port = 3000;
+    port = 3000,
+    dateFormat = 'hh:mm';
 
 // Handle the client connecting to the socket.
 io.on('connection', function(socket) {
 
     var
     // Provide a name to the newly connected client, based on the socket connection id.
-        client = 'Guest' + socket.conn.id.substring(0, 4),
+        client = 'G_' + socket.conn.id.substring(0, 4),
     // Set the current date, user-friendly formatted.
-        date = moment().format('hh:mm:ss'),
+        date = moment().format(dateFormat),
     // New connection message to be broadcasted to clients.
         messageData = {
             client: client,
@@ -37,7 +38,7 @@ io.on('connection', function(socket) {
 
         console.log(client + ' said ', message);
 
-        var date = moment().format('hh:mm:ss'),
+        var date = moment().format(dateFormat),
             messageData = {
                 client: client,
                 date: date,
@@ -53,7 +54,7 @@ io.on('connection', function(socket) {
     // Handle a disconnected client.
     socket.on('disconnect', function() {
 
-        var date = moment().format('hh:mm:ss');
+        var date = moment().format(dateFormat);
         var messageData = {
             client: client,
             date: date,
