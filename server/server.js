@@ -2,7 +2,11 @@
 var app = require('express')(),
     http = require('http').Server(app),
     io = require('socket.io')(http),
-    moment = require('moment');
+    moment = require('moment'),
+    cors = require('express-cors');
+
+// Allow CORS from any origin.
+app.use(cors());
 
 // Declare messages collection, and launch port.
 var messages = [],
