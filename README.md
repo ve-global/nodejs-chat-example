@@ -7,7 +7,7 @@ NodeJS Chat Example, socket-based
 * [bower](https://www.npmjs.com/package/bower#install)
 
 ## Installation
-    git clone https://github.com/ve-interactive/nodejs-chat-example.git
+    git clone https://github.com/ve-interactive/nodejs-chat-example.git && cd nodejs-chat-example/
     bower install
     npm install
     node server.js
