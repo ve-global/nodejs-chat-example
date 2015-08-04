@@ -11,5 +11,5 @@ NodeJS Chat Example, socket-based
     cd nodejs-chat-example/
     bower install
     npm install
-    node server.js
-then, you can access index.html file on your browser.
+    node server/server.js
+then, you can access client/index.html file on your browser.
