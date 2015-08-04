@@ -2,9 +2,9 @@
 NodeJS Chat Example, socket-based
 
 ## Pre-requisites
-* nodejs
-* npm
-* bower
+* [Node JS](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
+* [npm](https://github.com/npm/npm#super-easy-install)
+* [bower](https://www.npmjs.com/package/bower#install)
 
 ## Installation
 ``` git clone https://github.com/ve-interactive/nodejs-chat-example.git ```
