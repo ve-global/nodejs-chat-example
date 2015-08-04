@@ -13,3 +13,5 @@ NodeJS Chat Example, socket-based
     npm install
     node server/server.js
 then, you can access client/index.html file on your browser.
+
+## Demo [here](http://nodejs-demo.veinteractive.net/client/)
