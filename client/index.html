@@ -20,8 +20,13 @@
 <script src="script.js"></script>
 <script>
 
+    // Set a different socket server for nodejs-demo.
+    var socketServer = window.location.hostname === 'nodejs-demo.veinteractive.net' ?
+            'http://avioor.wp.vedev.co' :
+            'http://localhost:3000';
+
     // Establish socket connection to NodeJS.
-    var socket = io('http://localhost:3000');
+    var socket = io(socketServer);
 
     // Adds a new message to the chat box.
     var publishMessage = function(data) {
