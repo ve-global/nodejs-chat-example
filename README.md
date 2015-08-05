@@ -14,4 +14,5 @@ NodeJS Chat Example, socket-based
     node server/server.js
 then, you can access client/index.html file on your browser.
 
-## Demo [here](http://nodejs-demo.veinteractive.net/client/)
+## Demo [here](http://nodejs-demo.veinteractive.net/client/).
+## Transcript [here](https://github.com/ve-interactive/nodejs-chat-example/blob/master/DemoTranscript.md).
