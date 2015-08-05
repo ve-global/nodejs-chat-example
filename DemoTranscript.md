@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 Prior developing the chat, we need to have installed [Node JS](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager), [npm](https://github.com/npm/npm#super-easy-install), and [bower](https://www.npmjs.com/package/bower#install).
-This demo also presumes you have access to your http://localhost environment.
+This demo also presumes you have access to your http://localhost environment. On Linux distributions, usually the working directory is `/var/www/html/`, but you can choose any custom virtual host, etc.
 
 ## Used packages
 <ul>
