@@ -10,7 +10,7 @@ app.use(cors());
 
 // Declare messages collection, and launch port.
 var messages = [],
-    port = 3000,
+    port = 9999,
     dateFormat = 'hh:mm';
 
 // Handle the client connecting to the socket.

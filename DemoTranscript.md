@@ -60,7 +60,7 @@ First, we open our `server/server.js` file and input the following:
         io = require('socket.io')(http);
     
     // Define the port on which the server will be launched.
-    var port = 3000;
+    var port = 9999;
     
     // Handle the client connecting to the socket.
     io.on('connection', function(socket) {
@@ -77,9 +77,9 @@ First, we open our `server/server.js` file and input the following:
         console.log('Listening on *:' + port);
     });
 
-Then, you can launch the server with `node server/server.js`. It will prompt you `Listening on *:3000`. On a separate
+Then, you can launch the server with `node server/server.js`. It will prompt you `Listening on *:9999`. On a separate
 terminal, we can test that socket.io handshake works.
-Simply run `curl http://localhost:3000/socket.io/?transport=polling`, amd we will receive a json response like as
+Simply run `curl http://localhost:9999/socket.io/?transport=polling`, amd we will receive a json response like as
 follows:
 
     {
@@ -102,15 +102,15 @@ Now that we have the server-side prepared, let's insert the following code snipp
     <script src="../node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
     <script>
         // Establish socket connection to NodeJS.
-        var socket = io('http://localhost:3000');
+        var socket = io('http://localhost:9999');
     </script>
     </body>
     </html>
 
 Then, you can open your preferred browser and access the page online at `http://localhost/client/index.html`.
 
-If you enable your Inspector, you will recognise a request to http://localhost:3000/socket.io with some parameters,
-responding with _101 Switching protocols_. This is a result of `var socket = io('http://localhost:3000');`.
+If you enable your Inspector, you will recognise a request to http://localhost:9999/socket.io with some parameters,
+responding with _101 Switching protocols_. This is a result of `var socket = io('http://localhost:9999');`.
 
 ![Network Socket.IO handshake](./screenshots/socket-connection.png)
 
@@ -141,7 +141,7 @@ so, our file would look like:
     <script src="../node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
     <script>
         // Establish socket connection to NodeJS.
-        var socket = io('http://localhost:3000');
+        var socket = io('http://localhost:9999');
         socket.emit('toServer', 'hello from client');
         socket.on('fromServer', function(data) {
             console.log('server said', data);
@@ -166,7 +166,7 @@ so, our file would look like:
         io = require('socket.io')(http);
         
     // Define the port on which the server will be launched.
-    var port = 3000;
+    var port = 9999;
     
     // Handle the client connecting to the socket.
     io.on('connection', function(socket) {
@@ -272,7 +272,7 @@ Finally, we tight things on our `client/index.html` file:
     <script>
         
         // Establish socket connection to NodeJS.
-        var socket = io('http://localhost:3000');
+        var socket = io('http://localhost:9999');
     
         // Adds a new message to the chat box.
         var publishMessage = function(data) {
@@ -317,7 +317,7 @@ chat messages properly. To do that, let's adjust the `server/server.js` file as 
     
     // Declare messages collection, and launch port.
     var messages = [],
-        port = 3000,
+        port = 9999,
         dateFormat = 'hh:mm';
     
     // Handle the client connecting to the socket.
